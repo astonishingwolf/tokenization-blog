@@ -1,0 +1,22 @@
+\section{When did discrete representation get so bad?}
+
+Flow-based policies have emerged as the de facto parameterization of choice for
+robot learning, while discrete autoregressive (AR) alternatives are often
+dismissed on the grounds that quantizing continuous actions necessarily
+sacrifices fidelity. Yet, in other modalities, such as audio, autoregressive
+models have proven remarkably effective despite relying on discrete
+representations. This contrast raises a natural question: \emph{Is quantization
+really what holds back autoregressive policies in robotics?} The answer is
+perhaps surprising: quantization error alone is often insufficient to explain
+the failure of discrete policies. In the majority of cases, policies fail by a
+wide margin and cannot be explained by quantization error alone. Moreover,
+discrete actions are in fact more precise in tail-end situations. So why do
+discrete policies fail in the first place? As a starting point, we argue that
+the primary limitations of autoregressive action generation are uneven
+information allocation and error accumulation, rather than quantization error.
+In commonly used action representations such as FAST, uneven information
+allocation leads to variation in conditional token entropy across positions,
+which may result in unstable training dynamics. On the other hand, for action
+binning, long autoregressive sequences lead to error accumulation and degraded
+performance. To address both problems, we advocate a simple learned tokenization
+that encourages even information allocation while maintaining compression.

@@ -1,0 +1,32 @@
+\section{Architecture of the tokenizer}
+
+The proposed direction is a learned tokenizer that compresses action chunks
+while avoiding extreme concentrations of predictive difficulty. The original
+draft does not yet specify its architecture; the description below outlines the
+intended interface rather than a completed implementation.
+
+During tokenizer training, an encoder maps an expert action chunk into a shorter
+latent sequence. A discretization step converts that sequence into token IDs,
+and a decoder reconstructs continuous actions. The exact encoder, quantizer,
+decoder, and training losses remain to be supplied.
+
+During policy training, those token IDs become prediction targets for one
+autoregressive transformer conditioned on vision, language, and any robot-state
+inputs. At inference, the transformer predicts action tokens and the action
+decoder maps them into a continuous action chunk.
+
+The action encoder processes demonstrations when creating training targets; it
+does not require future expert actions at inference. Using a tokenizer and
+action decoder alongside the policy is compatible with a single autoregressive
+policy transformer, but the final architecture should make that boundary
+explicit.
+
+\begin{quote}
+The design goal: preserve the motion that matters, with a token sequence the
+policy can actually learn.
+\end{quote}
+
+Before presenting this as a result, specify the token budget, codebook or
+vocabulary, action normalization, reconstruction objective, and mechanism
+intended to balance information. Uniform token usage is not the same as evenly
+distributed conditional predictive difficulty.

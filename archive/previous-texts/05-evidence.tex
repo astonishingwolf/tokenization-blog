@@ -1,0 +1,20 @@
+\section{What would convince us?}
+
+First, separate representation error from prediction error. Execute decoded
+expert action chunks to assess the tokenizer’s distortion, then compare with
+policy-generated chunks. Keep the controller and evaluation protocol matched.
+
+Second, inspect the sequence. Report conditional token loss by position and test
+the effect of prefix perturbations. Track token count alongside reconstruction
+quality so that compression is not credited for improvements caused by another
+change.
+
+Finally, evaluate the actual robot policy. Compare scalar binning, FAST, and the
+learned tokenizer with matched data, backbone, and training budget. Report
+closed-loop success, decoding latency, and behavior around precise contact
+events.
+
+If a learned representation improves this trade-off, the conclusion is stronger
+than “discrete actions can work.” It suggests that the tokenizer is an essential
+part of the policy’s learning problem. The experiment results and final
+architecture are the next pieces to add to this draft.

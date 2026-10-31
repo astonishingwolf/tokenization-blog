@@ -1,0 +1,33 @@
+\section{Where do binning and FAST struggle?}
+
+Scalar action binning gives each action dimension at each timestep its own
+discrete symbol. It is simple, but chunking high-frequency actions can create
+long sequences. OpenVLA is a concrete example of per-dimension discretization;
+its tokenizer implementation is linked in the references.
+
+FAST addresses redundancy through a frequency-based representation using the
+discrete cosine transform, followed by quantization and token compression.
+Importantly, the FAST paper reports strong results, including settings where
+scalar discretization struggles. Its success supports the idea that
+representation matters.
+
+Our question concerns a possible remaining limitation in the single-transformer
+setting: does the resulting token sequence concentrate predictive difficulty
+into a few positions? The draft proposes that early tokens may carry difficult
+decisions while later tokens contribute less useful information. This is a
+hypothesis to measure, not an established consequence of the DCT. Compression,
+ordering, data, and conditioning all affect the final token distribution.
+
+The relevant quantity is conditional uncertainty: how hard is a token to predict
+given the observation, instruction, and preceding tokens? A broad token
+histogram alone does not answer that question, and high-frequency motion is not
+necessarily noise.
+
+Exposure bias adds a second issue. During teacher-forced training, each token is
+predicted after an expert prefix. During generation, it follows the model’s own
+predictions. An early mistake can change the context for later decisions,
+although one wrong token need not invalidate an entire action chunk.
+
+A useful comparison measures sequence length, loss by token position,
+reconstruction error, and closed-loop task success together. None of these
+measurements can replace the others.

@@ -1,0 +1,26 @@
+\section{Why compress actions at all?}
+
+Language arrives as a sequence of symbols with substantial structure. Robot
+actions usually arrive as densely sampled numerical signals. Adjacent timesteps
+often contain redundant information, but treating every scalar as a separate
+token asks a transformer to generate that redundancy one decision at a time.
+
+Consider a one-second chunk with 30 timesteps and seven action dimensions. With
+one token per scalar, that is 210 action tokens before any delimiters. A
+representation using 24 tokens would require far fewer sequential predictions
+for the same physical horizon. These numbers are illustrative, not experimental
+results.
+
+Shorter sequences offer fewer opportunities to depart from an expert prefix.
+They also reduce the number of sequential decoding steps. Neither benefit
+guarantees a better policy: compression can discard useful control detail or
+make the remaining tokens harder to predict.
+
+Downsampling is one possible way to reduce redundancy, but moving from 30 Hz to
+15 Hz is not automatically harmless. Whether it preserves behavior depends on
+the controller, dynamics, and task. A learned tokenizer should instead be judged
+on which distinctions it preserves at a given token budget.
+
+The target is therefore not the shortest possible sequence. It is a compact
+sequence that preserves task-relevant motion and remains predictable from
+observations, language, and preceding tokens.

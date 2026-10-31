@@ -1,0 +1,23 @@
+\section{Why did FAST and Action Binning fail ?}
+
+In the world of LLMs, tokenization is often seen as a backward form of learning
+that is redundant. However, the issue is that language is already one of the
+most compressed forms of information representation. A single word can pack a
+substantial amount of information, so the entire representation is already quite
+compressed to begin with.
+
+However, actions are different. A robot operating at 30 Hz can very well be
+represented at 15 Hz with some small changes. Then the question becomes:
+\emph{Why is compression necessary?}
+
+The idea is that the more compressed the esentation becomes, the easier the
+information assignment becomes. In fact, compression leads to shorter generation
+horizons, which in turn reduce error accumulation and ultimately lead to better
+policies.
+
+\emph{Okay, but FAST already does compression. Why did it fail?} Fair question.
+The problem with FAST is its uneven information allocation. Splitting the action
+representation into different DCT coefficients leads to the first few tokens
+having extremely high entropy, while the suffix tokens essentially encode noise.
+This leads to something much worse: due to exposure bias, an early token error
+during autoregressive generation can degrade subsequent predictions.

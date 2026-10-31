@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Tokenizer architecture" id="compact-tokenizer">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1120" pageHeight="620" background="#faf9f6">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" parent="1" vertex="1" value="Action tokenizer architecture" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=25;fontColor=#34402e;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="40" y="25" width="1040" height="24" />
+        </mxCell>
+        <mxCell id="input" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="45" y="350" width="290" height="72" />
+        </mxCell>
+        <mxCell id="action-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="58" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="action-motion-0" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="64" y="385" />
+            <mxPoint as="targetPoint" x="76" y="373" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="action-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="92" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="action-motion-1" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="98" y="385" />
+            <mxPoint as="targetPoint" x="110" y="373" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="action-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="126" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="action-motion-2" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="132" y="385" />
+            <mxPoint as="targetPoint" x="144" y="373" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="action-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="160" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="action-motion-3" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="166" y="385" />
+            <mxPoint as="targetPoint" x="178" y="373" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="register-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="200" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="register-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="234" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="register-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="268" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="register-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="302" y="367" width="24" height="24" />
+        </mxCell>
+        <mxCell id="input-label" parent="1" vertex="1" value="Input actions" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="45" y="427" width="145" height="24" />
+        </mxCell>
+        <mxCell id="register-label" parent="1" vertex="1" value="Registers" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="190" y="427" width="145" height="24" />
+        </mxCell>
+        <mxCell id="encoder" parent="1" vertex="1" value="Encoder" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=23;fontColor=#34402e;fillColor=#f1ead3;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="45" y="220" width="290" height="90" />
+        </mxCell>
+        <mxCell id="encoded" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="45" y="120" width="290" height="60" />
+        </mxCell>
+        <mxCell id="encoded-action-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="58" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-action-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="92" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-action-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="126" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-action-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="160" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-register-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="200" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-register-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="234" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-register-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="268" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-register-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="302" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="encoded-label" parent="1" vertex="1" value="Encoded actions + registers" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="45" y="89" width="290" height="24" />
+        </mxCell>
+        <mxCell id="latents" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="390" y="120" width="150" height="60" />
+        </mxCell>
+        <mxCell id="latent-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="402" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="latent-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="436" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="latent-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="470" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="latent-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="504" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="latent-label" parent="1" vertex="1" value="Register latents" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="390" y="89" width="150" height="24" />
+        </mxCell>
+        <mxCell id="fsq" parent="1" vertex="1" value="FSQ quantization" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=16;fontColor=#34402e;fillColor=#eee9ee;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="390" y="225" width="150" height="60" />
+        </mxCell>
+        <mxCell id="quantized" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="390" y="330" width="150" height="60" />
+        </mxCell>
+        <mxCell id="quantized-token-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="402" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="quantized-token-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="436" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="quantized-token-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="470" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="quantized-token-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="504" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="quantized-label" parent="1" vertex="1" value="Quantized tokens" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="390" y="401" width="150" height="24" />
+        </mxCell>
+        <mxCell id="policy-input" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="620" y="120" width="150" height="60" />
+        </mxCell>
+        <mxCell id="policy-token-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="632" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="policy-token-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="666" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="policy-token-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="700" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="policy-token-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="734" y="138" width="24" height="24" />
+        </mxCell>
+        <mxCell id="policy-input-label" parent="1" vertex="1" value="Quantized tokens" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="620" y="89" width="150" height="24" />
+        </mxCell>
+        <mxCell id="policy" parent="1" vertex="1" value="Surrogate policy" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=17;fontColor=#34402e;fillColor=#e2e9d9;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="620" y="225" width="150" height="60" />
+        </mxCell>
+        <mxCell id="likelihood" parent="1" vertex="1" value="Token likelihoods" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=17;fontColor=#34402e;fillColor=#f0eddf;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="870" y="225" width="200" height="60" />
+        </mxCell>
+        <mxCell id="decoder-input" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="620" y="330" width="150" height="60" />
+        </mxCell>
+        <mxCell id="decoder-token-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="632" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-token-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="666" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-token-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="700" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-token-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="734" y="348" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-input-label" parent="1" vertex="1" value="Quantized tokens" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="620" y="401" width="150" height="24" />
+        </mxCell>
+        <mxCell id="decoder" parent="1" vertex="1" value="Decoder" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=23;fontColor=#34402e;fillColor=#f1ead3;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="870" y="330" width="200" height="90" />
+        </mxCell>
+        <mxCell id="decoder-registers" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="620" y="470" width="150" height="60" />
+        </mxCell>
+        <mxCell id="decoder-register-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="632" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-register-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="666" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-register-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="700" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-register-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#e9b6ad;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="734" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="decoder-register-label" parent="1" vertex="1" value="Registers" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="620" y="539" width="150" height="24" />
+        </mxCell>
+        <mxCell id="output" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#f2f1eb;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="895" y="470" width="150" height="60" />
+        </mxCell>
+        <mxCell id="output-action-0" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="907" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="output-action-motion-0" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="913" y="506" />
+            <mxPoint as="targetPoint" x="925" y="494" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="output-action-1" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="941" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="output-action-motion-1" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="947" y="506" />
+            <mxPoint as="targetPoint" x="959" y="494" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="output-action-2" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="975" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="output-action-motion-2" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="981" y="506" />
+            <mxPoint as="targetPoint" x="993" y="494" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="output-action-3" parent="1" vertex="1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=18;fontColor=#34402e;fillColor=#b9cce1;strokeColor=#c9cebf;strokeWidth=1.2;">
+          <mxGeometry as="geometry" x="1009" y="488" width="24" height="24" />
+        </mxCell>
+        <mxCell id="output-action-motion-3" parent="1" edge="1" value="" style="endArrow=block;strokeColor=#687461;strokeWidth=1.2;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1015" y="506" />
+            <mxPoint as="targetPoint" x="1027" y="494" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="output-label" parent="1" vertex="1" value="Predicted actions" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=13;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="865" y="539" width="210" height="24" />
+        </mxCell>
+        <mxCell id="input-encoder" parent="1" edge="1" source="input" target="encoder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="encoder-encoded" parent="1" edge="1" source="encoder" target="encoded" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="select-latents" parent="1" edge="1" source="encoded" target="latents" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="latents-fsq" parent="1" edge="1" source="latents" target="fsq" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="fsq-tokens" parent="1" edge="1" source="fsq" target="quantized" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="tokens-policy" parent="1" edge="1" source="quantized" target="policy-input" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="580" y="360" />
+              <mxPoint x="580" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="policy-input-policy" parent="1" edge="1" source="policy-input" target="policy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="policy-likelihood" parent="1" edge="1" source="policy" target="likelihood" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="tokens-decoder-input" parent="1" edge="1" source="quantized" target="decoder-input" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="decoder-input-decoder" parent="1" edge="1" source="decoder-input" target="decoder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.3;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="815" y="360" />
+              <mxPoint x="815" y="357" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="registers-decoder" parent="1" edge="1" source="decoder-registers" target="decoder" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.7;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="815" y="500" />
+              <mxPoint x="815" y="393" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="decoder-output" parent="1" edge="1" source="decoder" target="output" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;strokeColor=#687461;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="legend" parent="1" vertex="1" value="Blue · actions       Coral · registers and latent tokens" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=12;fontColor=#626d5c;align=center;strokeColor=none;fillColor=none;">
+          <mxGeometry as="geometry" x="45" y="580" width="1025" height="24" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

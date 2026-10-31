@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The action tokenizer is part of the policy — Soham Dasgupta</title>
+<meta name="description" content="Why tokenization matters for a single autoregressive transformer VLA: compression, information allocation, and error accumulation.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js" defer></script>
+</head>
+<body>
+<div class="reading-progress" aria-hidden="true"></div>
+<main id="top">
+<div class="hero"><h1>The action tokenizer is part of the policy.</h1><div class="byline"><button id="print" type="button">Print essay ↗</button></div></div>
+<div class="essay-layout"><aside><div class="eyebrow">IN THIS ESSAY</div><nav aria-label="Table of contents"><a href="#discrete-representations"><span>01</span>When did discrete representation get so bad?</a>
+<a href="#fast-and-binning"><span>02</span>Why did FAST and Action Binning fail ?</a>
+<a href="#architecture"><span>03</span>Architecture of the Tokenizer</a>
+<a href="#evaluation"><span>04</span>Evaluation</a>
+<a href="#what-this-suggests"><span>05</span>What this suggests</a></nav></aside><article><section id="discrete-representations"><div class="section-label">01 /</div><h2>When did discrete representation get so bad?</h2><p>Flow-based policies have emerged as the de facto parameterization of choice for robot learning, while discrete autoregressive (AR) alternatives are often dismissed on the grounds that quantizing continuous actions necessarily sacrifices fidelity. Yet, in other modalities, such as audio, autoregressive models have proven remarkably effective despite relying on discrete representations. This contrast raises a natural question: <em>Is quantization really what holds back autoregressive policies in robotics?</em> The answer is perhaps surprising: quantization error alone is often insufficient to explain the failure of discrete policies. In the majority of cases, policies fail by a wide margin and cannot be explained by quantization error alone. Moreover, discrete actions are in fact more precise in tail-end situations. So why do discrete policies fail in the first place? As a starting point, we argue that the primary limitations of autoregressive action generation are uneven information allocation and error accumulation, rather than quantization error. In commonly used action representations such as FAST, uneven information allocation leads to variation in conditional token entropy across positions, which may result in unstable training dynamics. On the other hand, for action binning, long autoregressive sequences lead to error accumulation and degraded performance. To address both problems, we advocate a simple learned tokenization that encourages even information allocation while maintaining compression.</p></section>
+<section id="fast-and-binning"><div class="section-label">02 /</div><h2>Why did FAST and Action Binning fail ?</h2><p>In the world of LLMs, tokenization is often seen as a backward form of learning that is redundant. However, the issue is that language is already one of the most compressed forms of information representation. A single word can pack a substantial amount of information, so the entire representation is already quite compressed to begin with.</p>
+<p>However, actions are different. A robot operating at 30 Hz can very well be represented at 15 Hz with some small changes. Then the question becomes: <em>Why is compression necessary?</em></p>
+<p>The idea is that the more compressed the esentation becomes, the easier the information assignment becomes. In fact, compression leads to shorter generation horizons, which in turn reduce error accumulation and ultimately lead to better policies.</p>
+<p><em>Okay, but FAST already does compression. Why did it fail?</em> Fair question. The problem with FAST is its uneven information allocation. Splitting the action representation into different DCT coefficients leads to the first few tokens having extremely high entropy, while the suffix tokens essentially encode noise. This leads to something much worse: due to exposure bias, an early token error during autoregressive generation can degrade subsequent predictions.</p></section>
+<section id="architecture"><div class="section-label">03 /</div><h2>Architecture of the Tokenizer</h2><div class="architecture-image"><a href="Ttokenization_v2.png" aria-label="Open tokenizer architecture image at full size"><img src="Ttokenization_v2.png" alt="Action tokenizer architecture showing the encoder, FSQ quantization, and decoder" loading="lazy"></a></div></section>
+<section id="evaluation"><div class="section-label">04 /</div><h2>Evaluation</h2><h3>RoboMimic</h3>
+<h3>RoboCasa</h3>
+<h3>Real World</h3></section>
+<section id="what-this-suggests"><div class="section-label">05 /</div><h2>What this suggests</h2><p>The central question is not only how accurately a tokenizer reconstructs actions, but also how easily a single autoregressive transformer can predict its tokens. A representation with low quantization error can still be difficult to generate if it requires long sequences or concentrates predictive difficulty in a few token positions.</p>
+<p>This suggests that action tokenization should be designed together with the autoregressive policy. Compression can shorten the generation horizon, while a more even allocation of information may make token prediction easier. Both goals must preserve the action detail needed for control.</p>
+<p>The evaluations on RoboMimic, RoboCasa, and real-world tasks will test whether these design choices translate into better policies. Improvements across these settings would support the view that tokenization is a central part of making the single-transformer autoregressive VLA setting work.</p></section></article><div class="right-margin" aria-hidden="true">TOKENS → ACTIONS</div></div>
+<footer><a href="#top">Back to top ↑</a></footer>
+</main>
+</body>
+</html>
