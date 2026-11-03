@@ -4,7 +4,7 @@ Open **index.html** in a browser. No server, installation, or account is require
 
 ## Editing the writing
 
-1. Open the **texts** folder. Each numbered `.tex` file is one section, in reading order.
+1. Open the **texts** folder. Use descriptive lowercase filenames with hyphens, such as `background.tex` or `architecture.tex`. Section order comes from `main.tex`, not filenames.
 2. Edit the writing below `\section{Your heading}`. Leave a blank line between paragraphs.
 3. Run `python3 build.py` from this folder, then refresh **index.html**.
 
@@ -13,6 +13,7 @@ The `.tex` files are the source of truth for both HTML and LaTeX. Do not edit in
 Supported formatting for both outputs:
 
 - Subsections: `\subsection{RoboMimic}`.
+- Citation keys: `\cite{titok}` renders as `[titok]` in HTML. Bibliography resolution is not configured; LaTeX requires a matching bibliography entry for a resolved citation.
 
 - Italics: `\emph{text}` or `\textit{text}`.
 - Bold: `\textbf{text}`.
@@ -29,7 +30,13 @@ The HTML builder supports this small LaTeX subset, not arbitrary LaTeX commands,
 
 Open **main.tex** in Overleaf (upload the project including `texts/`), or run `pdflatex main.tex` with a local LaTeX installation. The PDF uses standard article typography; the HTML retains the existing website fonts and layout.
 
-To add a section, create a numbered file such as `07-next-steps.tex` starting with `\section{Your heading}`. The HTML navigation updates on rebuild. Also add `\input{texts/07-next-steps.tex}` before `\end{document}` in main.tex for the PDF.
+To insert a section anywhere:
+
+1. Create `texts/your-section-name.tex`, starting with `\section{Your heading}`.
+2. Add `\input{texts/your-section-name.tex}` at the desired position inside the document in `main.tex`.
+3. Run `python3 build.py` to update the blog. The PDF uses the same order automatically.
+
+The first input supplies the page title. Unlisted files remain drafts and do not appear in either output. The empty `texts/benefits.txt` file is a draft; give it a `.tex` extension and a section heading before adding it to `main.tex`. Reordering inputs does not change existing section links.
 
 ## Files
 

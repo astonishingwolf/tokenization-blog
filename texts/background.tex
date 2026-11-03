@@ -1,0 +1,23 @@
+\paragraph{Background on Tokenization.}
+Tokenization is a simple way of mapping continuous representations
+to discrete units. But why do we want discrete units in the first
+place? Autoregressive models, such as GPT, are commonly trained
+to predict discrete tokens using a cross-entropy loss. This makes
+discrete representations a natural choice for autoregressive
+action generation.
+
+Traditionally, vector quantization (VQ)~\cite{vq} has been used
+to obtain discrete representations. VQ maps continuous latents
+to entries in a learned codebook. However, recent approaches
+such as finite scalar quantization (FSQ)~\cite{fsq} provide
+a simpler alternative. Rather than learning a codebook,
+FSQ independently quantizes each latent dimension into a
+finite set of values.
+
+This induces a grid-like structure in the latent space,
+providing a natural notion of distance and neighborhood
+between discrete representations. We argue that this
+structure provides a useful inductive bias for
+autoregressive action generation.
+
+Overall, the quantization scheme is simple and effective.

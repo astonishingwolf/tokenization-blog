@@ -1,0 +1,45 @@
+\section{Evaluation}
+
+\subsection{RoboMimic}
+
+We perform all of our sanity experiments on the RoboMimic dataset. 
+For our comparision we follow the same technique as in the square and tool handling
+
+Generally it is understood that the model fails in the tool hang because it is not able to 
+perform that level of fine grained control. We say it is false the model instead learns better 
+assignment and can perform better. 
+% Add the evaluation setup and RoboMimic results here.
+
+\subsection{RoboCasa}
+
+We evaluate on the RoboCasa dataset. Since our focus is on the action representation capabilities of the models
+we thought of using the training and the testing set slightly differently we train on the entire data of the 
+robocasa and check iits capabilities on the test set. For the baseline we FT the Pi-0 and the Pi=0.5 baseline 
+model on the set leading to better representation. We also found that having conditional dropout in the flow helps 
+in performing the CFG and we went ahead and added it to the model 
+We post train the model on both PaliGemma backbone and Qwen 4B backbone and we definitely seee a improvement over
+the original models on 
+Overall the results look This
+We see clear 10 pp increae in oour scores suggesting better representation learning capabilities
+Moverover there is no need for any kind of knowledge iinsulation or any fancy techniques and 
+just tokenizing the action space for multiple embediment is sufficiet and this is very effective
+
+I think the entire latent space is better represented in the current case 
+For comparision we compare with both Pi0 and Pi0.5 FT model and this is the number we get 
+
+
+
+
+% Add the evaluation setup and RoboCasa results here.
+
+\subsection{Real World}
+For the real world test we train our tokenizer on the complete ABC data however we perform policy for single task
+We focus on two most common tasks. The first one is the bottles in the bin and the second one is the mug flip task
+We compare our results with the baseline in the original paper and we see we are able to significantly improve The
+policy performance on the both the tasks
+
+We also perform a few ablation studies to understand the contribution of the different components of the tokenizer
+WE train the model on single task evaluation on just bottles task and the turn mug task and we  notice extremely 
+smooth movement both suggesting the offer better alternation in the action space generation 
+
+% Add the real-world evaluation setup and results here.

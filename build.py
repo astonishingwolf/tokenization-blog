@@ -28,7 +28,7 @@ def inline(text):
         if char != '\\':
             if char in '{}$':
                 raise ValueError('Escape literal braces/dollar signs; HTML math rendering is not configured.')
-            result.append(escape(char))
+            result.append('&nbsp;' if char == '~' else escape(char))
             pos += 1
             continue
         pos += 1
@@ -44,6 +44,8 @@ def inline(text):
             label, pos = group(text, pos)
             if not value.startswith('https://'): raise ValueError('Only HTTPS links are supported')
             result.append(f'<a href="{escape(value, quote=True)}">{inline(label)}</a>')
+        elif command == 'cite':
+            result.append('<span class="citation">[' + escape(value) + ']</span>')
         elif command in ('emph', 'textit', 'textbf', 'texttt'):
             tag = {'emph':'em','textit':'em','textbf':'strong','texttt':'code'}[command]
             result.append(f'<{tag}>{inline(value)}</{tag}>')
@@ -83,18 +85,37 @@ def paragraphs(text):
             result.append('<p>' + inline(block.replace('\n', ' ')) + '</p>')
     return '\n'.join(result)
 
-files = sorted((ROOT / 'texts').glob('[0-9][0-9]-*.tex'))
+# main.tex is the single source of section order for both HTML and PDF.
+main_source = re.sub(r'(?<!\\)%[^\n]*', '', (ROOT / 'main.tex').read_text())
+body_match = re.search(r'\\begin\{document\}(.*?)\\end\{document\}', main_source, re.S)
+if body_match is None:
+    raise ValueError('main.tex must contain a document environment')
+files = []
+for input_path in re.findall(r'\\input\{([^{}]+)\}', body_match[1]):
+    file = ROOT / input_path
+    if not file.suffix:
+        file = file.with_suffix('.tex')
+    file = file.resolve()
+    if not file.is_relative_to((ROOT / 'texts').resolve()) or not file.is_file():
+        raise ValueError(f'Section must be an existing file in texts/: {input_path}')
+    if file in files:
+        raise ValueError(f'Duplicate section input: {input_path}')
+    files.append(file)
+if not files:
+    raise ValueError('Add section inputs to main.tex before building')
 sections, nav = [], []
 for i, file in enumerate(files):
     # Remove LaTeX comments, preserving escaped percent signs.
     source = re.sub(r'(?<!\\)%[^\n]*', '', file.read_text()).strip()
-    if not source.startswith(r'\section{'): raise ValueError(f'{file.name}: start with a section title')
-    title, end = group(source, len(r'\section'))
+    heading = re.match(r'\\(section|subsection|paragraph)\{', source)
+    if heading is None:
+        raise ValueError(f'{file.name}: start with a section, subsection, or paragraph heading')
+    title, end = group(source, heading.end() - 1)
     body = source[end:]
     if i == 0:
         hero = '<h1>' + inline(title) + '</h1>' + paragraphs(body)
         continue
-    slug = file.stem[3:]
+    slug = file.stem
     nav.append(f'<a href="#{slug}"><span>{i:02}</span>{inline(title)}</a>')
     sections.append(f'<section id="{slug}"><div class="section-label">{i:02} /</div><h2>{inline(title)}</h2>{paragraphs(body)}</section>')
 words = sum(len(f.read_text().split()) for f in files)
